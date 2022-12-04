@@ -1,12 +1,12 @@
 package org.example.Data;
 
 
-public class Сustomer extends Person{
+public class Customer extends Person{
 
     private Boolean priority;
     private  Integer id;
 
-    public Сustomer(Integer id, String firstName, String patronymic, String lastName, String position, String phoheNamber, Boolean priority) {
+    public Customer(Integer id, String firstName, String patronymic, String lastName, String position, String phoheNamber, Boolean priority) {
         super(firstName, patronymic, lastName, position, phoheNamber);
         this.priority = priority;
         this.id = id;
@@ -14,7 +14,7 @@ public class Сustomer extends Person{
 
     }
 
-    public Сustomer(String firstName, String patronymic, String lastName, String position, String phoheNamber, Integer id) {
+    public Customer(String firstName, String patronymic, String lastName, String position, String phoheNamber, Integer id) {
         super(firstName, patronymic, lastName, position, phoheNamber);
         this.id = id;
     }
@@ -33,5 +33,13 @@ public class Сustomer extends Person{
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "priority=" + priority +
+                ", id=" + id +
+                '}'+ super.toString();
     }
 }
